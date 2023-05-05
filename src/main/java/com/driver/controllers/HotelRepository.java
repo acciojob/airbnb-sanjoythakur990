@@ -11,7 +11,7 @@ public class HotelRepository {
     Map<Integer, List<Booking>> bookingMap = new HashMap<>();
     public String addHotel(Hotel hotel){
         String name=hotel.getHotelName();
-        if(hotelDb.containsKey(name) || hotel==null)
+        if(hotelDb.containsKey(name) || name.equals(""))
             return "FAILURE";
         hotelDb.put(name,hotel);
         return "SUCCESS";
